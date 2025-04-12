@@ -6,5 +6,5 @@ A portfolio for myself.
 
 ## Links
 
-*Github Pages:*
+*Github Pages:* https://elikowal.github.io/EK-Portfolio/
 
