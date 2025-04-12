@@ -18,12 +18,7 @@ html {
   scroll-behavior: smooth;
 }
 
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-::selection {
+::-moz-selection, ::selection {
   background: #b3d4fc;
   text-shadow: none;
 }
@@ -36,19 +31,22 @@ html {
   color: #003366;
 }
 
-
 .background-section {
   position: absolute;
-  top: 80px; /* Adjust based on header height */
-  bottom: 80px; /* Adjust based on footer height */
+  top: 80px;
+  bottom: 80px;
   width: 100%;
   background-size: cover;
   background-position: center;
 }
 
+/* ========================================================================== */
+/* Body and Layout */
+/* ========================================================================== */
+
 body {
   font-family: 'Inter', sans-serif;
-  background-image: url('../img/portfolio-b2.png');
+  background-image: url('/img/portfolio-b2.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -56,6 +54,11 @@ body {
   min-height: 100vh;
 }
 
+
+
+/* ========================================================================== */
+/* Header Styles */
+/* ========================================================================== */
 
 header {
   display: flex;
@@ -75,7 +78,6 @@ header {
   border-bottom: 5px solid #0C204C;
 }
 
-
 nav a {
   margin-left: 1.5rem;
   text-decoration: none;
@@ -83,10 +85,21 @@ nav a {
   font-weight: 600;
 }
 
+.finlandica-font {
+  font-family: "Finlandica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 1;
+  font-style: normal;
+}
+
+/* ========================================================================== */
+/* Hero Section Styles */
+/* ========================================================================== */
+
 .hero {
   background-size: cover;
   background-position: center;
-  margin:100px;
+  margin: 100px;
   padding: 4rem 2rem;
   display: flex;
   justify-content: center;
@@ -97,22 +110,16 @@ nav a {
   padding-bottom: 40px;
 }
 
-
-.finlandica-font {
-  font-family: "Finlandica", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 1;
-  font-style: normal;
+.hero2 {
+  background-image: url('../img/floral_image.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  padding: 2rem 0;
 }
-
-.card {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  max-width: 500px;
-  text-align: center;
-}
+/* ========================================================================== */
+/* About Section Styles */
+/* ========================================================================== */
 
 .about {
   padding: 4rem 2rem;
@@ -137,20 +144,25 @@ nav a {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+/* ========================================================================== */
+/* Projects Section Styles */
+/* ========================================================================== */
+
+
+.card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  max-width: 500px;
+  text-align: center;
+}
+
 .projects {
   padding: 4rem 2rem;
   background-color: #e7edf5;
 }
-.reveal {
-  opacity: 0;
-  transform: translateY(20px); /* Move slightly downward initially */
-  transition: all 0.5s ease-in-out; /* Smooth animation effect */
-}
 
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0); /* Return to original position */
-}
 
 .projects-list {
   display: flex;
@@ -187,13 +199,6 @@ footer {
   object-fit: cover;
 }
 
-.hero2 {
-  background-image: url('../img/floral_image.jpg'); /* Use your image */
-  background-size: cover;
-  background-position: center;
-  height: 50vh;
-  padding: 2rem 0;
-}
 
 @media (max-width: 768px) {
   .profile-card {
@@ -211,6 +216,16 @@ hr {
   padding: 0;
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(20px); /* Move slightly downward initially */
+  transition: all 0.5s ease-in-out; /* Smooth animation effect */
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0); /* Return to original position */
+}
 /*
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers:
@@ -355,9 +370,9 @@ h2 {
 }
 
 @media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 
@@ -458,4 +473,3 @@ h2 {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-
